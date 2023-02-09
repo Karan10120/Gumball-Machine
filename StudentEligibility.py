@@ -1,7 +1,7 @@
 
 def scholarship_eligibility(age, lived, worked, parents_lived, volunteered, household_income):
     def age_req(age):
-        min_age_req = 18,
+        min_age_req = 18
         max_age_req = 24
         return (min_age_req <= age and age <= max_age_req)
 
@@ -21,5 +21,3 @@ def scholarship_eligibility(age, lived, worked, parents_lived, volunteered, hous
         return (household_income < min_household_income)
     
     return (age_req(age) and (CA_Residency(lived, worked, parents_lived, volunteered) or Dean_Consideration(household_income)))
-
-        
